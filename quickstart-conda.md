@@ -33,7 +33,5 @@ conda config --add channels conda-forge
 ## Export the Environment
 An important step is recording all the tools and versions downloaded to the environment. This ensures reproducibility for other future users.
 
-
-
-
+`conda env export --no-builds > rnaseq_env.yaml`
 
