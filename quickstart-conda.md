@@ -43,3 +43,5 @@ Anyone can recreate a conda environment if they have the environment yaml file:
 ___
 
 By following these steps, you will avoid painful experiences downloading packages, will only need to load one package and environment (i.e. conda and conda-env), and will have a completely reproducible list of packages and their versions. Good.
+
+This can be run automatically, e.g. when you make a git commit, to ensure yaml always up to date. Might be slow though. Better ways probably available.
