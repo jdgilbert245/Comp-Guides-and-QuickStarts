@@ -1,4 +1,4 @@
-# Conda Quickstart HowTo
+# Conda Quickstart Guide
 Quickstart guide for using conda with myriad at UCL. Example is for rnaseq but may wish to change.
 
 More info on [conda website](https://anaconda.org/anaconda/conda).
