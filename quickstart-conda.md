@@ -35,3 +35,11 @@ An important step is recording all the tools and versions downloaded to the envi
 
 `conda env export --no-builds > rnaseq_env.yaml`
 
+### Recreating an environment from an environment yaml
+Anyone can recreate a conda environment if they have the environment yaml file:
+
+`conda env create -f environment.yaml`
+
+___
+
+By following these steps, you will avoid painful experiences downloading packages, will only need to load one package and environment (i.e. conda and conda-env), and will have a completely reproducible list of packages and their versions. Good.
