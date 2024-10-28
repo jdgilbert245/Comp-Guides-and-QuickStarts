@@ -3,6 +3,16 @@ Quickstart guide for using conda with myriad at UCL. Example is for rnaseq but m
 
 More info on [conda website](https://anaconda.org/anaconda/conda).
 
+When you're working on programming projects, managing different software libraries and tools can get complicated. This is where environment managers like Conda come in handy.
+
+Conda is an open-source environment management tool that makes it easy to manage different versions of Python, R, or other programming languages, along with the libraries and packages your project depends on. Without tools like Conda, you might run into issues like:
+
+- **Dependency conflicts**: One project requires a specific version of a library, while another project needs a different version. If both projects are on the same system, this can cause conflicts
+- **Version control problems**: Updating libraries or tools globally on your machine might break older projects that rely on previous versions.
+- **Reproducibility challenges**: When sharing your project with others, ensuring that they have the exact environment setup can be difficult.
+
+Conda solves these problems by creating isolated environments, where each project can have its own set of libraries and dependencies without interfering with other projects. You can think of an environment as a clean workspace for your project. You can create, switch between, and delete environments easily with a few commands.
+
 ## Conda
 Add some conda info
 
