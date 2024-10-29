@@ -10,7 +10,7 @@
 ### Perform fastqc on raw RNA Seq reads
 
 ##### Env
-module load /python/miniconda3
+module load python/miniconda3
 source $UCL_CONDA_PATH/etc/profile.d/conda.sh
 conda activate YOUR_ENV
 
