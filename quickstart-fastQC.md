@@ -26,13 +26,33 @@ You can confirm that per base quality scores are acceptable. Above 28 is conside
 ![per base sequence quality](https://github.com/jdgilbert245/test-RNASeq-repo/blob/main/assets/per-base-seq-quality.png)
 
 ## Per Sequence Quality
-This is a density plot of the average quality score for each sequence. We are looking for the general quality to be ≥ Q30, which corresponds to a base-calling accuracy of 99.9%. We also look for secondary peaks at lower values. Ours again were pretty good.
+This is a density plot of the average quality score for each sequence. We are looking for the general quality to be ≥ Q30, which corresponds to a base-calling accuracy of 99.9%. We also look for secondary peaks at lower values. Ours again were good.
 
 ![per sequence quality](https://github.com/jdgilbert245/test-RNASeq-repo/blob/main/assets/per-seq-quality.png)
 
+## Per Base Sequence Content
+“Per base sequence content” always gives a FAIL for RNA-seq data because the first 10-12 bases result from the ‘random’ hexamer priming that occurs during RNA-seq library preparation. This priming is not as random as we might hope giving an enrichment in particular bases for these intial nucleotides [according to here](https://hbctraining.github.io/Intro-to-rnaseq-hpc-salmon/lessons/qc_fastqc_assessment.html).
 
+![per base seq content](https://github.com/jdgilbert245/test-RNASeq-repo/blob/main/assets/per-base-content.png)
 
+## Per Sequence GC Content
+It is a good idea to note whether the GC content of the central peak corresponds to the [expected % GC for the organism](https://pmc.ncbi.nlm.nih.gov/articles/PMC2909565/). The distribution should be roughly normal. Sharp peaks might represent contamination or over-represented sequences. We see some sharp peaks, which starts to reveal our problem with overrepresented sequences.
 
+![per sequence GC content](https://github.com/jdgilbert245/test-RNASeq-repo/blob/main/assets/per-seq-content.png)
+
+## Sequence Duplication
+High levels of duplication can indicate too many PCR cycles or too little starting material. In our case, we see sequences with >10,000 reads. This flags that there are some sequences that are very highly represented and further suggests we may have to consider this before doing our full analysis.
+
+![sequence duplication](https://github.com/jdgilbert245/test-RNASeq-repo/blob/main/assets/seq-duplication.png).
+
+## Overrepresented Sequences Table
+If we know some sequences are overrepresented, it is useful to have the actual sequences for the most common so we can see which genes they are associated with. You can [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome) the top hits as a quick way to know which genes they are from.
+
+![overrepresented sequences table](https://github.com/jdgilbert245/test-RNASeq-repo/blob/main/assets/overrep-seqs.png)
+
+You can see that the most overrepresented sequence is `CTTTATTAGGCAGAAGCCAGGTGGTCAAGGAACTCCAGAATTTCCTCTGT`, which is present in almost 2% of our reads! A BLAST search says this is from hemoglobin subunit beta. Beta-globin is a component of hemoglobin, the protein responsible for carrying oxygen in red blood cells. Mature mammalian red blood cells also lack nuclei, meaning a lot of common processes are absent. Therefore it is not surprising that hemoglobin-related genes are highly overrepresented in blood samples; blood is indeed blood. This tells us two things:
+1. We may want to filter out hemoglobin transcripts before running the differential expression analysis
+2. If we aren't interested in hemoglobin, we should deplete for hemoglobin RNA during library preparation.
 
 
 
