@@ -1,7 +1,7 @@
 # Job Monitoring and Optimisation
 When submitting jobs to the hpc, we have to specify the time, amount of memory and number of cores. We aim to request enough resources that allow the job to run efficiently. However, if we request a large amount of RAM but job uses only a small amount of it, the unused RAM is wasted. Similarly, if we request more cores than our programme can use, the cores are not used and not available for anyone else to use. All of this leads to longer queueing time for everyone.
 
-It is fine to experiment with different resources for a job, especially if it helps you to request the optimal resources in future jobs. You can monitor the performance of your job in a few ways.
+It is fine to experiment with different resources for a job, especially if it helps you to request the optimal resources in future jobs. You can monitor the performance of your job in a few ways. More info [here](https://github.com/UCL-RITS/mkdocs-rc-docs/blob/f4b0025e05c858eb1ff1e5ac335a7d62f3bdfce4/mkdocs-project-dir/docs/howto.md#nodesforjob).
 
 **qstat** shows you info about jobs currently running.
 
