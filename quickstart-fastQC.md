@@ -1,6 +1,9 @@
 # FastQC Guide
 FastQC is an important step....
 
+Further reading:
+- [Carpentries data wrangling for genomics](https://datacarpentry.org/wrangling-genomics/02-quality-control.html)
+- 
 
 
 # Install
