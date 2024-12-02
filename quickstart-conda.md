@@ -62,7 +62,12 @@ Mamba syntax is apparently identical to conda syntax and can access existing con
 
 Install not straightforward on cluster. Need to figure out.
 
+## Conda on Managed Windows Machines
+I had problems using conda on my managed Windows machine. I installed miniconda following the instructions on the [website](https://docs.anaconda.com/miniconda/install/#quick-command-line-install) (which required IT to get on a call and give admin permission temporarily).
 
+First, the location of conda was not automatically added to path. I added the path to a ~/.bashrc.sh [file](https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux).
+
+Then, I could create an environment as above, but when I tried to activate, it kept telling me to run `conda init`. This is a step to set up conda on your machine but was not running properly. Eventually, (at an ARC drop-in) we figured out that I needed to run `source activate`. This at least let me activate environments.
 
 
 
