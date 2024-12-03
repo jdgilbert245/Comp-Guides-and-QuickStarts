@@ -5,7 +5,7 @@
 DIR=/path/to/notebook/folder
 FILE=filename.ipynb
 
-### nbconvert available in python environment: py_convert_nb
+### jupyter notebook, nbconvert, pandoc and dependencies available in python environment: py_convert_nb
 ## env yaml available on github
 conda activate py_convert_nb
 
