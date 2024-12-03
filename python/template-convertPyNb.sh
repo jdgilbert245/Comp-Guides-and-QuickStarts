@@ -11,4 +11,4 @@ conda activate py_convert_nb
 
 ### convert notebook to html 
 ## no input removes content of code cells
-jupyter nbconvert --no-input --to html ${DIR}/${FILE} # can also be --to pdf
+jupyter nbconvert --no-input --to html ${DIR}/${FILE} # can be --to pdf or --to html
