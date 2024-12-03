@@ -5,10 +5,10 @@
 DIR=/path/to/notebook/folder
 FILE=filename.ipynb
 
-### jupyter notebook, nbconvert, pandoc and dependencies available in python environment: py_convert_nb
+### jupyter notebook, nbconvert, and dependencies available in python environment: py_convert_nb
 ## env yaml available on github
 conda activate py_convert_nb
 
 ### convert notebook to html 
 ## no input removes content of code cells
-jupyter nbconvert --no-input --to html ${DIR}/${FILE} # can be --to pdf or --to html
+jupyter nbconvert --no-input --to html ${DIR}/${FILE}
