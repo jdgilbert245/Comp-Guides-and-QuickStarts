@@ -70,5 +70,5 @@ First, the location of conda was not automatically added to path. I added the pa
 Then, I could create an environment as above, but when I tried to activate, it kept telling me to run `conda init`. This is a step to set up conda on your machine but was not running properly. Eventually, (at an ARC drop-in) we figured out that I needed to run `source activate`. This at least let me activate environments.
 
 
-
-
+## Conda for python notebooks
+To use environments for notebooks, you need to create the environment and install packages as normal. Then, in a terminal/command line/VSC session, activate the environment and run `jupyter notebook`. This will open a notebook session in the environment and will have access to the installed libraries.
