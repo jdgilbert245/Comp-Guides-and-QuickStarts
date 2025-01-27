@@ -49,6 +49,8 @@ An important step is recording all the tools and versions downloaded to the envi
 Anyone can recreate a conda environment if they have the environment yaml file:
 
 `conda env create -f environment.yaml`
+
+Some libraries are OS-specific so you might get an error if trying to re-create an environment from a yaml written on a different OS. To avoid this, keep OS-specific yaml files.
 ___
 
 By following these steps, you will avoid painful experiences downloading packages, will only need to load one package and environment (i.e. conda and conda-env), and will have a completely reproducible list of packages and their versions. Good.
@@ -68,7 +70,6 @@ I had problems using conda on my managed Windows machine. I installed miniconda 
 First, the location of conda was not automatically added to path. I added the path to a ~/.bashrc.sh [file](https://www.digitalocean.com/community/tutorials/bashrc-file-in-linux).
 
 Then, I could create an environment as above, but when I tried to activate, it kept telling me to run `conda init`. This is a step to set up conda on your machine but was not running properly. Eventually, (at an ARC drop-in) we figured out that I needed to run `source activate`. This at least let me activate environments.
-
 
 ## Conda for python notebooks
 To use environments for notebooks, you need to create the environment and install packages as normal. Then, in a terminal/command line/VSC session, activate the environment and run `jupyter notebook`. This will open a notebook session in the environment and will have access to the installed libraries.
