@@ -4,7 +4,7 @@ Quick start guide to using the R environment manager `renv`.
 ## renv
 By default, R installs all packages to a single folder. This can lead to conflicts among dependencies and makes it hard for others to reproduce the exact set of packages you have installed. Renv creates reproducible environments for R projects (similar to [conda](https://github.com/jdgilbert245/general-info/blob/main/environments/quickstart-conda.md)).
 
-This guide demonstrates how to set up a renv for your project (based on [this guide](https://rstudio.github.io/renv/articles/renv.html).
+This guide demonstrates how to set up a renv for your project (based on [this guide](https://rstudio.github.io/renv/articles/renv.html)).
 
 ## Usage
 ### Definitions
