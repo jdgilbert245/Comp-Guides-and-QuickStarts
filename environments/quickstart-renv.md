@@ -21,7 +21,7 @@ To convert a project to use renv, call `renv::init()`. It adds three new files a
 you can continue to use familiar tools like `install.packages()`. But you can also use `renv::install()`: it’s a little less typing and can install packages from GitHub, Bioconductor, and more, not just CRAN.
 
 #### Reproducing Environments
-The next important pair of tools is `renv::snapshot()` and `renv::restore()`. snapshot() updates the lockfile with metadata about the currently-used packages in the project library. This is useful because you can then share the lockfile and other people or other computers can easily reproduce your current environment by running restore(), which uses the metadata from the lockfile to install exactly the same version of every package. This pair of functions gives you the benefits of reproducibility and portability: you are now tracking exactly which package versions you have installed so you can recreate them on other machines.
+The next important pair of tools is `renv::snapshot()` and `renv::restore()`. `snapshot()` updates the lockfile with metadata about the currently-used packages in the project library. This is useful because you can then share the lockfile and other people or other computers can easily reproduce your current environment by running `restore()`, which uses the metadata from the lockfile to install exactly the same version of every package. This pair of functions gives you the benefits of reproducibility and portability: you are now tracking exactly which package versions you have installed so you can recreate them on other machines.
 
 __________
 
