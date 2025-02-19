@@ -12,7 +12,7 @@ To do this, we need the md5 hashes for each of the files - this must be sent by 
 
 2. navigate to the folder that contains the files you want to check. E.g. `cd Downloads\F24A430002266_HOMlefhR_2\`
 
-3. define the files containing the md5 hashes and the one to store the output  
+3. define the files containing the md5 hashes and the one to store the output. Note, this assumes they exist in the current working directory.  
 `$md5File = "md5.txt"`  
 `$outputFile = "md5_check.txt"`
 
