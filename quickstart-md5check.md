@@ -1,31 +1,24 @@
-####################################################
-### Check Downloads Are Complete and Uncorrupted ###
-####################################################
+# Check Downloads Are Complete and Uncorrupted
 
-## when downloading large files, it is not uncommon for interruptions to the download to corrupt the information downloaded
-## we can check the uploaded and downloaded files are identical using its MD5 hash
-## an md5 hash is a unique digital fingerprint generated for a given file. It is a long string of 30+ letters and numbers
+when downloading large files, it is not uncommon for interruptions to the download to corrupt the information downloaded. we can check the uploaded and downloaded files are identical using its MD5 hash an md5 hash is a unique digital fingerprint generated for a given file. It is a long string of 30+ letters and numbers.
 
-## To do this, we need the md5 hashes for each of the files - this must be sent by the uploader
-## We then download the data, generate new md5 hashes, and compare them to the originals
+To do this, we need the md5 hashes for each of the files - this must be sent by the uploader. We then download the data, generate new md5 hashes, and compare them to the originals
 
+## MD5 on Windows: Powershell
 
-##################################
-### MD5 on Windows: Powershell ###
-##################################
+### Set up
 
-#### Set up ####
+1. open powershell
 
-### 1. open powershell
+2. navigate to the folder that contains the files you want to check. E.g. `cd Downloads\F24A430002266_HOMlefhR_2\`
 
-### 2. navigate to the folder that contains the files you want to check. E.g. cd Downloads\F24A430002266_HOMlefhR_2\
+3. define the files containing the md5 hashes and the one to store the output  
+`$md5File = "md5.txt"`  
+`$outputFile = "md5_check.txt"`
 
-### 3. define the files containing the md5 hashes and the one to store the output
-$md5File = "md5.txt"
-$outputFile = "md5_check.txt"
+### Read in data and generate md5s
 
-#### Read in data and generate md5s ####
-
+```
 # Read the md5.txt file
 $lines = Get-Content $md5File
 
@@ -62,11 +55,13 @@ foreach ($line in $lines) {
 
     # let us know we have finished with this file
     Write-Host "MD5 generated for $filePath"
-}
+} 
 
 # once we have generated MD5 hashes for all files, print a message and quit:
 Write-Host "MD5 hashes generated! Results saved in $outputFile"
 Pause
+
+```
 
 
 
