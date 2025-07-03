@@ -51,6 +51,8 @@ Anyone can recreate a conda environment if they have the environment yaml file:
 `conda env create -f environment.yaml`
 
 Some libraries are OS-specific so you might get an error if trying to re-create an environment from a yaml written on a different OS. To avoid this, keep OS-specific yaml files.
+
+You can use this to set up an environment locally and move that to HPCs e.g. myriad. Beware that HPCs often use linux operating systems and this might cause problems when recreating environments originally created on windows or mac operating systems.
 ___
 
 By following these steps, you will avoid painful experiences downloading packages, will only need to load one package and environment (i.e. conda and conda-env), and will have a completely reproducible list of packages and their versions. Good.
