@@ -9,5 +9,9 @@ To transfer data from your Windows machine to the RDSS, follow [this guide](http
 
 ### Mac 
 
+### Command Line
+To transfer data to/from HPCs using command line code, `rsync` is often recommended. `rsync` can safely repeat transfers that fail.
+
+Always verify downloads are successful using e.g. [md5sum checks](https://github.com/jdgilbert245/Comp-Guides-and-QuickStarts/blob/main/hpc/quickstart-md5check.md).
 
 ## To/From Other Remote Location
