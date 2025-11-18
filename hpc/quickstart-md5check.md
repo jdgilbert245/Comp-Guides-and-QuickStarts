@@ -63,6 +63,16 @@ Pause
 
 ```
 
+## On Linux including HPCs
+Generating md5sums is easy on Linux: `md5sum filename > md5sums.txt`.
+
+You can generate multiple checksums at the same time `md5sum *.zip > md5sums.txt`.
+
+To verify MD5 checksums on Linux, type: `md5sum -c md5sums.txt`
+
+To verify on windows, you can run the above Linux command through Git Bash or WSL. In PowerShell you can generate the md5 hash with `Get-FileHash .\filename -Algorithm MD5`, which you can compare manually with the original.
+
+
 
 
 
