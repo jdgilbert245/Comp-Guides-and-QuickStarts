@@ -13,7 +13,7 @@ DIR=/home/ucsagil/Scratch/projects/training/repos/rnaseq/development
 
 TARget=${DIR}/test-RNASeq-repo
 
-TARout=/rdss/rd01/ritd-ag-project-rd01ve-jgilb71/test-RNASeq-repo.tar.gz
+TARout=${DIR}/test-RNASeq-repo.tar.gz
 
 tar -czvf $TARout $TARget 
 ```
